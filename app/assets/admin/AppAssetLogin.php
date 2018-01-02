@@ -2,21 +2,22 @@
 /**
  *
  */
-
-namespace app\assets;
+namespace app\assets\admin;
 
 use yii\web\AssetBundle;
 
 /**
- * Class AppAsset
- * @package app\assets
+ * Class AppAssetLogin
+ * @package app\assets\admin
  */
-class AppAsset extends AssetBundle
+class AppAssetLogin extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'web/css/site.css',
+        'vendor/bower/animate.css/animate.min.css',
+        'web/build/css/custom.min.css',
+        'web/css/login.css',
     ];
     public $js = [
     ];
