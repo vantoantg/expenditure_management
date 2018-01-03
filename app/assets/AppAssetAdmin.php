@@ -3,7 +3,7 @@
  *
  */
 
-namespace app\assets\admin;
+namespace app\assets;
 
 use yii\web\AssetBundle;
 
@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
  * Class AppAsset
  * @package app\assets\admin
  */
-class AppAsset extends AssetBundle
+class AppAssetAdmin extends AssetBundle
 {
 	public $basePath = '@webroot';
 	public $baseUrl = '@web';
