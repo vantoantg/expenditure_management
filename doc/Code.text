@@ -1,2 +1,8 @@
 http://www.yiiframework.com/extension/yii2-migration-creator/
 http://www.bsourcecode.com/2013/04/render-and-renderpartial-in-yii/#renderPartial
+
+
+
+Php-...:
+
+Either GD PHP extension with FreeType support or ImageMagick PHP extension with PNG support is required. (apt-get install php5.6-gd)
