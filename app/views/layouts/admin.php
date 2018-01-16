@@ -8,8 +8,9 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use app\assets\AppAssetAdmin;
 
-\app\assets\admin\AppAsset::register($this);
+AppAssetAdmin::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

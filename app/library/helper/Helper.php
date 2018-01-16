@@ -6,6 +6,7 @@
 namespace app\library\helper;
 
 use Yii;
+use \yii\web\Response;
 
 /**
  * Class Helper
@@ -16,6 +17,20 @@ class Helper
 	public function init()
 	{
 
+	}
+
+	/**
+	 * @param array $data
+	 * @return array
+	 */
+	public static function jsonData($data = [])
+	{
+		Yii::$app->response->format = Response::FORMAT_JSON;
+		if(!$data){
+			return ['data' => null];
+		}else{
+			return $data;
+		}
 	}
 
 	/**
