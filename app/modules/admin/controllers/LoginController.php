@@ -24,9 +24,9 @@ class LoginController extends BaseController
 	 */
 	public function actionIndex()
 	{
-		if ($this->app->user->isGuest) {
+		/*if ($this->app->user->isGuest) {
 			return $this->goHome();
-		}
+		}*/
 
 		$model = new AdminLoginForm();
 		if ($model->load($this->app->request->post()) && $model->login()) {
