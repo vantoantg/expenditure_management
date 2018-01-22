@@ -24,6 +24,9 @@ $this->title = 'Login';
 						]
 					]) ?>
 
+                    <div class="error-login form-group mg-bt-0 pd-0 hide">
+                        <span class="error text-danger"></span>
+                    </div>
                     <div class="form-group">
 						<?= $form->field($model, 'username', ['template' => '{input}{label}'])->textInput(['autofocus' => true, 'autocomplete' => 'off']) ?>
                     </div>
@@ -44,7 +47,7 @@ $this->title = 'Login';
                             </div>
                         </div><!--end .col -->
                         <div class="col-xs-6 text-right">
-                            <button class="btn btn-primary btn-raised" type="submit">Login</button>
+                            <button class="btn btn-primary btn-raised" id="login" type="submit">Login</button>
                         </div><!--end .col -->
                     </div><!--end .row -->
 					<?php ActiveForm::end(); ?>

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\LoginForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -75,7 +76,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new AdminLoginForm();
+        $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
