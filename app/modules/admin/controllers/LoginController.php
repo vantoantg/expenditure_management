@@ -45,4 +45,11 @@ class LoginController extends BaseController
 		]);
 	}
 
+    public function actionLogout()
+    {
+        $this->app->user->logout();
+
+        return $this->redirect(['/admin/login']);
+    }
+
 }

@@ -2,7 +2,8 @@
 
 return [
 	/* Url                                                              => Controller/action */
-	'/' => 'site/index',
+//	'/' => 'site/index',
+	'/' => 'admin/default/index',
 	'login.html' => 'site/login',
 	'about.html' => 'site/about',
 	'contact.html' => 'site/contact',
@@ -12,6 +13,8 @@ return [
 	/* Admin module
 	Url                                                                 => 'module/controller/action
 	*/
+	'admin/login' => 'admin/login/index',
+	'admin/logout' => 'admin/login/logout',
 	'admin' => 'admin/default/index',
 
 

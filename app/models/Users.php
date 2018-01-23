@@ -6,7 +6,7 @@ use app\library\helper\Cons;
 use yii\base\Security;
 use yii\web\IdentityInterface;
 
-class Users extends \app\models\Base\TnUsers implements IdentityInterface
+class Users extends \app\models\base\User implements IdentityInterface
 {
 
     public $slug_name;

@@ -106,7 +106,7 @@
                         <li><a href="../../html/pages/calendar.html">My appointments</a></li>
                         <li class="divider"></li>
                         <li><a href="../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
-                        <li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+                        <li><a href="<?= \yii\helpers\Url::toRoute('/admin/login/logout') ?>" methods="post"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
                     </ul><!--end .dropdown-menu -->
                 </li><!--end .dropdown -->
             </ul><!--end .header-nav-profile -->

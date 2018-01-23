@@ -30,7 +30,7 @@ AppAssetAdminLogin::register($this);
     <script type="text/javascript" src="web/template/admin/assets/js/libs/utils/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="menubar-hoverable header-fixed ">
+<body class="menubar-hoverable header-fixed login-page">
 <?php $this->beginBody() ?>
 
 <!-- BEGIN LOGIN SECTION -->

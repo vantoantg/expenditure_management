@@ -13,6 +13,9 @@ use yii\web\Controller;
 class AdminController extends BaseController
 {
 
+    /**
+     * @var \Yii
+     */
 	public $app;
 
 	public function init()

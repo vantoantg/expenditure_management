@@ -22,9 +22,10 @@ class AppAssetAdminLogin extends AssetBundle
 		'web/template/admin/assets/css/theme-default/material-design-iconic-font.min.css',
 		'web/template/admin/assets/css/theme-default/libs/rickshaw/rickshaw.css',
 		'web/template/admin/assets/css/theme-default/libs/morris/morris.core.css',
+
+		'web/css/common/common.css',
 	];
 	public $js = [
-		'web/template/admin/assets/js/libs/jquery/jquery-1.11.2.min.js',
 		'web/template/admin/assets/js/libs/bootstrap/bootstrap.min.js',
 		'web/template/admin/assets/js/libs/spin.js/spin.min.js',
 		'web/template/admin/assets/js/libs/autosize/jquery.autosize.min.js',
@@ -49,6 +50,10 @@ class AppAssetAdminLogin extends AssetBundle
 		'web/template/admin/assets/js/core/source/AppNavSearch.js',
 		'web/template/admin/assets/js/core/source/AppVendor.js',
 		'web/template/admin/assets/js/core/demo/Demo.js',
+
+		'web/js/common/common.js',
+		'web/js/common/service.js',
+		'web/js/admin/login.js',
 	];
     public $depends = [
         'yii\web\YiiAsset',
