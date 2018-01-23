@@ -33,6 +33,13 @@ class Helper
 		}
 	}
 
+    /**
+     * @return string
+     */
+	public static function homeUrl(){
+	    return Yii::$app->getHomeUrl();
+    }
+
 	/**
 	 * @return string
 	 */

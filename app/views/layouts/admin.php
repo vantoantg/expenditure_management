@@ -420,7 +420,7 @@ AppAssetAdmin::register($this);
                 </a>
             </div>
             <div class="expanded">
-                <a href="../../html/dashboards/dashboard.html">
+                <a href="<?= \app\library\helper\Helper::homeUrl() ?>">
                     <span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
                 </a>
             </div>
@@ -432,7 +432,7 @@ AppAssetAdmin::register($this);
 
                 <!-- BEGIN DASHBOARD -->
                 <li>
-                    <a href="../../html/dashboards/dashboard.html" class="active">
+                    <a href="<?= \app\library\helper\Helper::homeUrl() ?>" class="active">
                         <div class="gui-icon"><i class="md md-home"></i></div>
                         <span class="title">Dashboard</span>
                     </a>
