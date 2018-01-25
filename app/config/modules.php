@@ -28,4 +28,7 @@ return [
     'auth' => [
         'class' => \app\modules\auth\Module::class,
     ],
+    'user' => [
+        'class' => \app\modules\user\Module::class,
+    ],
 ];

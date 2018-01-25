@@ -98,7 +98,7 @@ use \app\library\helper\User;
             <ul class="header-nav header-nav-profile">
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
-                        <img src="web/template/admin/assets/img/avatar1.jpg?1403934956" alt="" />
+                        <img src="<?= \app\library\helper\Helper::homeUrl()?>web/template/admin/assets/img/avatar1.jpg?1403934956" alt="" />
                         <span class="profile-info">
 									<?= User::currentUser('name') ?>
 									<small>Administrator</small>
