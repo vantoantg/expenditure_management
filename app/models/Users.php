@@ -48,15 +48,10 @@ class Users extends \app\models\base\User implements IdentityInterface
     }
 
     /**
-    037
      * Finds user by password reset token
-    038
      *
-    039
-     * @param  string      $token password reset token
-    040
+     * @param string $token password reset token
      * @return static|null
-    041
      */
     public static function findByPasswordResetToken($token)
     {
