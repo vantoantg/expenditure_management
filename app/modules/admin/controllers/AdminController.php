@@ -24,6 +24,7 @@ class AdminController extends BaseController
 		$this->app = \Yii::$app;
 		$this->layout = '/admin';
 		$this->app->name = 'Admin';
+
 		if(!\Yii::$app->getUser()->identity){
 			return $this->redirect(['/admin/login']);
 		}else{

@@ -1,3 +1,8 @@
+<?php
+
+use \app\library\helper\User;
+
+?>
 <header id="header" >
     <div class="headerbar">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -95,7 +100,7 @@
                     <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
                         <img src="web/template/admin/assets/img/avatar1.jpg?1403934956" alt="" />
                         <span class="profile-info">
-									Daniel Johnson
+									<?= User::currentUser('name') ?>
 									<small>Administrator</small>
 								</span>
                     </a>
