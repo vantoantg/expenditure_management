@@ -2,17 +2,17 @@
 
 namespace app\modules\auth\controllers;
 
+use app\modules\admin\controllers\AdminController;
 use Yii;
 use app\models\AuthAssignment;
 use app\models\search\AuthAssignment as AuthAssignmentSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * AuthAssignmentController implements the CRUD actions for AuthAssignment model.
  */
-class AuthAssignmentController extends Controller
+class AuthAssignmentController extends AdminController
 {
     /**
      * @inheritdoc
