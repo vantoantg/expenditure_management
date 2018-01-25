@@ -17,6 +17,10 @@ return [
 	'admin/logout' => 'admin/login/logout',
 	'admin' => 'admin/default/index',
 
+    /* Auth module
+	*/
+    '/auth' => 'auth/auth-assignment/index',
+
 
 
 
