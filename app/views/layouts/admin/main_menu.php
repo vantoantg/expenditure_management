@@ -102,7 +102,7 @@ use app\library\helper\Helper;
     <!-- END EMAIL -->
 
     <!-- BEGIN DASHBOARD -->
-    <li>
+    <li class="">
         <a href="../../html/layouts/builder.html" >
             <div class="gui-icon"><i class="md md-web"></i></div>
             <span class="title">Layouts</span>

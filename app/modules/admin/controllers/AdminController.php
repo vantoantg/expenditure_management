@@ -2,9 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
-use app\library\helper\Helper;
 use app\library\helper\Role;
-use yii\web\Controller;
 
 /**
  * Class BaseController
@@ -28,7 +26,6 @@ class AdminController extends BaseController
 		if(!\Yii::$app->getUser()->identity){
 			return $this->redirect(['/admin/login']);
 		}
-
 
         $this->setSetting();
 

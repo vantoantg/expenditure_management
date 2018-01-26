@@ -6,7 +6,6 @@ use app\modules\admin\controllers\AdminController;
 use Yii;
 use app\models\AuthRule;
 use app\models\search\AuthRule as AuthRuleSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -65,6 +64,12 @@ class AuthRuleController extends AdminController
      */
     public function actionCreate()
     {
+        if (Yii::$app->user->id == $model->user_id || \Yii::$app->user->can('manageArticles')) {
+            // ...
+        } else {
+            throw new ForbiddenHttpException('You are not allowed to edit this article.');
+        }
+
         $model = new AuthRule();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
