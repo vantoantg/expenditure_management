@@ -13,6 +13,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'liJ-f-p6Z7KWqYt7vk25rA08ZjbpEq9y',
         ],
+        'authClientCollection' => require __DIR__ . '/auth.php',
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
