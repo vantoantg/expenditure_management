@@ -19,7 +19,21 @@ return [
 
     /* Auth module
 	*/
-    '/auth' => 'auth/auth-assignment/index',
+    '/auth'                 => 'auth/auth-assignment/index',
+    '/auth/auth-assignment' => 'auth/auth-assignment/index',
+    '/auth/auth-rule'       => 'auth/auth-rule/index',
+    '/auth/auth-item'       => 'auth/auth-item/index',
+    '/auth/auth-item-child' => 'auth/auth-item-child/index',
+
+    /* User module
+	*/
+    '/user' => 'user/user/index',
+    '/user/create' => 'user/user/create',
+
+    /* User system
+	*/
+    '/system' => 'system/migration/index',
+    '/system/migration' => 'system/migration/index',
 
 
 

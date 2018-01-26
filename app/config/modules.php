@@ -31,4 +31,7 @@ return [
     'user' => [
         'class' => \app\modules\user\Module::class,
     ],
+    'system' => [
+        'class' => \app\modules\system\Module::class,
+    ],
 ];

@@ -27,9 +27,10 @@ class AdminController extends BaseController
 
 		if(!\Yii::$app->getUser()->identity){
 			return $this->redirect(['/admin/login']);
-		}else{
-			$this->setSetting();
 		}
+
+
+        $this->setSetting();
 
 		if(!Role::allowAdmin()){
 //			return $this->redirect(Helper::siteURL());

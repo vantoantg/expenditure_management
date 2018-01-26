@@ -2,6 +2,7 @@
 
 namespace app\modules\auth\controllers;
 
+use app\modules\admin\controllers\AdminController;
 use Yii;
 use app\models\AuthItem;
 use app\models\search\AuthItem as AuthItemSearch;
@@ -12,7 +13,7 @@ use yii\filters\VerbFilter;
 /**
  * AuthItemController implements the CRUD actions for AuthItem model.
  */
-class AuthItemController extends Controller
+class AuthItemController extends AdminController
 {
     /**
      * @inheritdoc
