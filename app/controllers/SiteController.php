@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Auth;
 use app\models\LoginForm;
 use app\models\Users;
 use Yii;
@@ -61,9 +62,16 @@ class SiteController extends Controller
         ];
     }
 
+    /**
+     * @param $client
+     */
     public function successCallback($client)
     {
+        Auth::detectUserType($client);
+
+
         $attributes = $client->getUserAttributes();
+
         // user login or signup comes here
         /*
         Checking facebook email registered yet?
@@ -71,10 +79,9 @@ class SiteController extends Controller
         die(print_r($attributes));
         */
 
-        $user = Users::find()->where(['email' => $attributes['email']])->one();
+        $user = Users::find()->where(['username' => $attributes['email']])->one();
         if (!empty($user)) {
             Yii::$app->user->login($user);
-
         } else {
             // Save session attribute user from FB
             $session = Yii::$app->session;
