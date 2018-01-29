@@ -30,11 +30,6 @@ return [
             'clientId' => '592988894149611',
             'clientSecret' => 'c081d2c7c8d11c94a183dbfcc435ca0b',
         ],
-        /*'linkedin' => [
-            'class' => \yii\authclient\clients\LinkedIn::class,
-            'clientId' => 'linkedin_client_id',
-            'clientSecret' => 'linkedin_client_secret',
-        ],*/
         'twitter' => [
             'class' => \yii\authclient\clients\Twitter::class,
             'attributeParams' => [
@@ -43,15 +38,22 @@ return [
             'consumerKey' => 'KQ3PQvbdCahcywwd5OXr0eftp',
             'consumerSecret' => 'SBUUIMqmITWPYFiqFUaN5a3N1KF3b1YGFH37jHfbniVQalfPes',
         ],
-        /*'live' => [
-            'class' => \yii\authclient\clients\Live::class,
-            'clientId' => 'live_client_id',
-            'clientSecret' => 'live_client_secret',
-        ],*/
         'github' => [
             'class' => 'yii\authclient\clients\GitHub',
             'clientId' => '17cfbf0f3dbbfd14801c',
             'clientSecret' => '804acf61a3720164e2708f645a9976c89c9b0801',
         ],
+        'linkedin' => [
+            'class' => \yii\authclient\clients\LinkedIn::class,
+            'clientId' => 'linkedin_client_id',
+            'clientSecret' => 'linkedin_client_secret',
+        ],
+
+        'live' => [
+            'class' => \yii\authclient\clients\Live::class,
+            'clientId' => 'live_client_id',
+            'clientSecret' => 'live_client_secret',
+        ],
+
     ],
 ];

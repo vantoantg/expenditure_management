@@ -63,13 +63,9 @@ $this->title = 'Login';
                     <h3 class="text-light">
                         or
                     </h3>
-                    <?php $authAuthChoice = AuthChoice::begin([
-                        'baseAuthUrl' => ['/auth/auth/auth']
-                    ]); ?>
-                    <?php foreach ($authAuthChoice->getClients() as $client): ?>
-                        <p><?= $authAuthChoice->clientLink($client) ?></p>
-                    <?php endforeach; ?>
-                    <?php AuthChoice::end(); ?>
+                    <?= yii\authclient\widgets\AuthChoice::widget([
+                        'baseAuthUrl' => ['/site/auth']
+                    ]) ?>
                 </div><!--end .col -->
             </div><!--end .row -->
         </div><!--end .card-body -->

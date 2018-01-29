@@ -3,16 +3,18 @@
 namespace app\controllers;
 
 use app\models\LoginForm;
+use app\models\Users;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\AdminLoginForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $successUrl = 'Success';
+
     /**
      * @inheritdoc
      */
@@ -52,7 +54,34 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'successCallback'],
+            ],
         ];
+    }
+
+    public function successCallback($client)
+    {
+        $attributes = $client->getUserAttributes();
+        // user login or signup comes here
+        /*
+        Checking facebook email registered yet?
+        Maxsure your registered email when login same with facebook email
+        die(print_r($attributes));
+        */
+
+        $user = Users::find()->where(['email' => $attributes['email']])->one();
+        if (!empty($user)) {
+            Yii::$app->user->login($user);
+
+        } else {
+            // Save session attribute user from FB
+            $session = Yii::$app->session;
+            $session['attributes'] = $attributes;
+            // redirect to form signup, variabel global set to successUrl
+            $this->successUrl = \yii\helpers\Url::to(['signup']);
+        }
     }
 
     /**
