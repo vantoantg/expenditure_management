@@ -1,6 +1,7 @@
 <?php
 
 use \yii\bootstrap\ActiveForm;
+use yii\authclient\widgets\AuthChoice;
 
 $this->title = 'Login';
 ?>
@@ -62,14 +63,13 @@ $this->title = 'Login';
                     <h3 class="text-light">
                         or
                     </h3>
-                    <p>
-                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-facebook pull-left"></i>Login
-                            with Facebook</a>
-                    </p>
-                    <p>
-                        <a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-twitter pull-left"></i>Login
-                            with Twitter</a>
-                    </p>
+                    <?php $authAuthChoice = AuthChoice::begin([
+                        'baseAuthUrl' => ['/auth/auth/auth']
+                    ]); ?>
+                    <?php foreach ($authAuthChoice->getClients() as $client): ?>
+                        <p><?= $authAuthChoice->clientLink($client) ?></p>
+                    <?php endforeach; ?>
+                    <?php AuthChoice::end(); ?>
                 </div><!--end .col -->
             </div><!--end .row -->
         </div><!--end .card-body -->
