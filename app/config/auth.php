@@ -24,7 +24,7 @@
 return [
     'class' => \yii\authclient\Collection::class,
     'clients' => [
-        'facebook' => [
+        /*'facebook' => [
             'class' => \yii\authclient\clients\Facebook::class,
             'authUrl' => 'https://www.facebook.com/dialog/oauth',
             'clientId' => '592988894149611',
@@ -37,13 +37,13 @@ return [
             ],
             'consumerKey' => 'KQ3PQvbdCahcywwd5OXr0eftp',
             'consumerSecret' => 'SBUUIMqmITWPYFiqFUaN5a3N1KF3b1YGFH37jHfbniVQalfPes',
-        ],
+        ],*/
         'github' => [
             'class' => 'yii\authclient\clients\GitHub',
             'clientId' => '17cfbf0f3dbbfd14801c',
             'clientSecret' => '804acf61a3720164e2708f645a9976c89c9b0801',
         ],
-        'linkedin' => [
+        /*'linkedin' => [
             'class' => \yii\authclient\clients\LinkedIn::class,
             'clientId' => 'linkedin_client_id',
             'clientSecret' => 'linkedin_client_secret',
@@ -53,7 +53,6 @@ return [
             'class' => \yii\authclient\clients\Live::class,
             'clientId' => 'live_client_id',
             'clientSecret' => 'live_client_secret',
-        ],
-
+        ],*/
     ],
 ];

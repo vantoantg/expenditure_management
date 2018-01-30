@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $username
+ * @property string $email
  * @property string $password
  * @property string $auth_key
  * @property string $access_token
@@ -17,10 +18,12 @@ use Yii;
  * @property string $name
  * @property string $slug_name
  * @property string $avatar
+ * @property string $avatar_url
  * @property int $archive
  * @property int $type
  * @property string $lang
  * @property string $timezone
+ * @property string $attributes
  * @property int $status
  */
 class User extends \yii\db\ActiveRecord
@@ -41,7 +44,9 @@ class User extends \yii\db\ActiveRecord
         return [
             [['username', 'password', 'auth_key'], 'required'],
             [['role', 'archive', 'type', 'status'], 'integer'],
+            [['attributes'], 'string'],
             [['username', 'name'], 'string', 'max' => 32],
+            [['email', 'avatar_url'], 'string', 'max' => 255],
             [['password'], 'string', 'max' => 64],
             [['auth_key', 'access_token', 'password_reset_token'], 'string', 'max' => 128],
             [['slug_name', 'avatar'], 'string', 'max' => 155],
@@ -59,6 +64,7 @@ class User extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'username' => 'Username',
+            'email' => 'Email',
             'password' => 'Password',
             'auth_key' => 'Auth Key',
             'access_token' => 'Access Token',
@@ -67,10 +73,12 @@ class User extends \yii\db\ActiveRecord
             'name' => 'Name',
             'slug_name' => 'Slug Name',
             'avatar' => 'Avatar',
+            'avatar_url' => 'Avatar Url',
             'archive' => 'Archive',
             'type' => 'Type',
             'lang' => 'Lang',
             'timezone' => 'Timezone',
+            'attributes' => 'Attributes',
             'status' => 'Status',
         ];
     }

@@ -9,31 +9,57 @@
 namespace app\models;
 
 
+use app\models\base\User;
+use Carbon\Carbon;
+use yii\helpers\Url;
+
 class Auth extends \yii\db\ActiveRecord
 {
 
     /**
      * @param $client
+     * @return string
      */
     public static function detectUserType($client)
     {
         $clientId = $client->getId();
         switch ($clientId) {
             case 'github':
-                self::userGitHub($clientId->getUserAttributes());
+                return self::userGitHub($client->getUserAttributes());
         }
     }
 
+    /**
+     * @param array $userData
+     * @return string
+     */
     public static function userGitHub($userData = []){
-        $user = Users::find()->where(['username' => $userData['email']])->one();
-        if (!empty($user)) {
-            \Yii::$app->user->login($user);
+        $user = Users::find()->where(['email' => $userData['email']])->one();
+        if ($user) {
+            \Yii::$app->user->login(Users::findOne($user->id));
         } else {
             // Save session attribute user from FB
-            $session = Yii::$app->session;
-            $session['attributes'] = $userData;
-            // redirect to form signup, variabel global set to successUrl
-//            $this->successUrl = \yii\helpers\Url::to(['signup']);
+            $user = self::newUser($userData);
+            \Yii::$app->user->login(Users::findOne($user->id));
         }
+        return Url::to(['/']);
+    }
+
+    /**
+     * @param $userData
+     * @return Users
+     */
+    public static function newUser($userData){
+        $model = new Users();
+        $model->username = $userData['login'];
+        $model->email = $userData['email'];
+        $model->generateAuthKey();
+        $model->setPassword('123456');
+        $model->name = $userData['name'];
+        $model->avatar_url = $userData['avatar_url'];
+        $model->attributes = json_encode($userData);
+        $model->save();
+
+        return $model;
     }
 }
