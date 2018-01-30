@@ -13,3 +13,9 @@ Either GD PHP extension with FreeType support or ImageMagick PHP extension with 
 Php Rbac (Role based access control): http://www.yiiframework.com/doc-2.0/guide-security-authorization.html#rbac
 
 run to create table: yii migrate --migrationPath=@yii/rbac/migrations
+
+Auth:
+composer require --prefer-dist yiisoft/yii2-authclient
+
+Rich Text Input With Redactor:
+composer require --prefer-dist yiidoc/yii2-redactor "*"

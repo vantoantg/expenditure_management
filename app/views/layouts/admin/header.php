@@ -1,3 +1,8 @@
+<?php
+
+use \app\library\helper\User;
+
+?>
 <header id="header" >
     <div class="headerbar">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,14 +42,14 @@
                         <li class="dropdown-header">Today's messages</li>
                         <li>
                             <a class="alert alert-callout alert-warning" href="javascript:void(0);">
-                                <img class="pull-right img-circle dropdown-avatar" src="web/template/admin/assets/img/avatar2.jpg?1404026449" alt="" />
+                                <img class="pull-right img-circle dropdown-avatar" src="<?= \app\library\helper\Helper::homeUrl()?>web/template/admin/assets/img/avatar2.jpg?1404026449" alt="" />
                                 <strong>Alex Anistor</strong><br/>
                                 <small>Testing functionality...</small>
                             </a>
                         </li>
                         <li>
                             <a class="alert alert-callout alert-info" href="javascript:void(0);">
-                                <img class="pull-right img-circle dropdown-avatar" src="web/template/admin/assets/img/avatar3.jpg?1404026799" alt="" />
+                                <img class="pull-right img-circle dropdown-avatar" src="<?= \app\library\helper\Helper::homeUrl()?>web/template/admin/assets/img/avatar3.jpg?1404026799" alt="" />
                                 <strong>Alicia Adell</strong><br/>
                                 <small>Reviewing last changes...</small>
                             </a>
@@ -93,9 +98,9 @@
             <ul class="header-nav header-nav-profile">
                 <li class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
-                        <img src="web/template/admin/assets/img/avatar1.jpg?1403934956" alt="" />
+                        <img src="<?= \app\library\helper\Helper::homeUrl()?>web/template/admin/assets/img/avatar1.jpg?1403934956" alt="" />
                         <span class="profile-info">
-									Daniel Johnson
+									<?= User::currentUser('name') ?>
 									<small>Administrator</small>
 								</span>
                     </a>

@@ -25,7 +25,7 @@ class AppAssetAdmin extends AssetBundle
 		'web/template/admin/assets/css/theme-default/libs/morris/morris.core.css',
 	];
 	public $js = [
-		'web/template/admin/assets/js/libs/jquery/jquery-1.11.2.min.js',
+//		'web/template/admin/assets/js/libs/jquery/jquery-1.11.2.min.js',
 		'web/template/admin/assets/js/libs/bootstrap/bootstrap.min.js',
 		'web/template/admin/assets/js/libs/spin.js/spin.min.js',
 		'web/template/admin/assets/js/libs/autosize/jquery.autosize.min.js',
@@ -53,8 +53,8 @@ class AppAssetAdmin extends AssetBundle
 		'web/template/admin/assets/js/core/demo/DemoDashboard.js',
 	];
 	public $depends = [
-//		'yii\web\YiiAsset',
-//		'yii\bootstrap\BootstrapAsset',
+		'yii\web\YiiAsset',
+		'yii\bootstrap\BootstrapAsset',
 	];
 //    public $jsOptions = ['position' => \yii\web\View::POS_END];
 }

@@ -2,17 +2,21 @@
 
 namespace app\controllers;
 
+use app\models\Auth;
 use app\models\LoginForm;
+use app\models\Users;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\AdminLoginForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+    public $successUrl;
+
     /**
      * @inheritdoc
      */
@@ -52,7 +56,22 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'successCallback'],
+                'successUrl' => $this->successUrl,
+            ],
         ];
+    }
+
+    /**
+     * @param $client
+     * @return Response
+     */
+    public function successCallback($client)
+    {
+        $this->successUrl = Url::to(['/']);
+        Auth::detectUserType($client);
     }
 
     /**
