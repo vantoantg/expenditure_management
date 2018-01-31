@@ -13,7 +13,8 @@ class Users extends \app\models\base\User implements IdentityInterface
         USER_TYPE_DEFAULT = 1, //  Register
         USER_TYPE_FACEBOOK = 2,
         USER_TYPE_GOOGLE = 3,
-        USER_TYPE_GITHUB = 4;
+        USER_TYPE_TWITTER = 4,
+        USER_TYPE_GITHUB = 5;
 
     public $slug_name;
     public $new_password;

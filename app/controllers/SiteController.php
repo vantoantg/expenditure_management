@@ -71,7 +71,7 @@ class SiteController extends Controller
     public function successCallback($client)
     {
         $this->successUrl = Url::to(['/']);
-        Auth::detectUserType($client);
+        (new Auth())->detectUserType($client);
     }
 
     /**
