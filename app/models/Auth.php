@@ -22,7 +22,7 @@ class Auth extends \yii\db\ActiveRecord
     public static function detectUserType($client)
     {
         echo '<pre>';
-        print_r($client);
+        print_r($client->getUserAttributes());
         echo '</pre>';
         die;
         $clientId = $client->getId();
