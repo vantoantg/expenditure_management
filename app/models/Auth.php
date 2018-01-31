@@ -15,7 +15,6 @@ use yii\helpers\Url;
 
 class Auth extends \yii\db\ActiveRecord
 {
-
     /**
      * @param $client
      * @return string
@@ -54,10 +53,11 @@ class Auth extends \yii\db\ActiveRecord
         $model->username = $userData['login'];
         $model->email = $userData['email'];
         $model->generateAuthKey();
-        $model->setPassword('123456');
+        $model->password = '123456';
         $model->name = $userData['name'];
         $model->avatar_url = $userData['avatar_url'];
         $model->attributes = json_encode($userData);
+        $model->type = Users::USER_TYPE_GITHUB;
         $model->save();
 
         return $model;
