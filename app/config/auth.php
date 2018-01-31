@@ -24,7 +24,7 @@
 return [
     'class' => \yii\authclient\Collection::class,
     'clients' => [
-        /*'facebook' => [
+        'facebook' => [
             'class' => \yii\authclient\clients\Facebook::class,
             'authUrl' => 'https://www.facebook.com/dialog/oauth',
             'clientId' => '592988894149611',
@@ -37,7 +37,7 @@ return [
             ],
             'consumerKey' => 'KQ3PQvbdCahcywwd5OXr0eftp',
             'consumerSecret' => 'SBUUIMqmITWPYFiqFUaN5a3N1KF3b1YGFH37jHfbniVQalfPes',
-        ],*/
+        ],
         'github' => [
             'class' => 'yii\authclient\clients\GitHub',
             'clientId' => '17cfbf0f3dbbfd14801c',
