@@ -21,10 +21,6 @@ class Auth extends \yii\db\ActiveRecord
      */
     public static function detectUserType($client)
     {
-        echo '<pre>';
-        print_r($client);
-        echo '</pre>';
-        die;
         $clientId = $client->getId();
         switch ($clientId) {
             case 'github':
