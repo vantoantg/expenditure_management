@@ -95,12 +95,12 @@ class Auth extends \yii\db\ActiveRecord
      */
     public function newUser($userData){
         $model = new Users();
-        $model->username = Helper::_isset($userData['login'], $userData['email']);
+        $model->username = isset($userData['login']) ? $userData['login'] : $userData['email'];
         $model->email = $userData['email'];
         $model->generateAuthKey();
         $model->password = '123456';
-        $model->name = Helper::_isset($userData['name']);
-        $model->avatar_url = Helper::_isset($userData['avatar_url']);
+        $model->name = isset($userData['name']) ? $userData['name'] : null;
+        $model->avatar_url = isset($userData['avatar_url']) ? $userData['avatar_url'] : null;
         $model->attributes = json_encode($userData);
         $model->type = $this->userType;
         $model->save();
