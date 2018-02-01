@@ -22,6 +22,9 @@
  */
 
 return [
+    'front' => [
+        'class' => \app\modules\front\Module::class,
+    ],
     'admin' => [
         'class' => \app\modules\admin\Module::class,
     ],

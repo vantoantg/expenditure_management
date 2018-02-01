@@ -2,8 +2,8 @@
 
 return [
 	/* Url                                                              => Controller/action */
-//	'/' => 'site/index',
-	'/' => 'admin/default/index',
+	'/' => 'front/default/index',
+//	'/' => 'admin/default/index',
 	'login.html' => 'site/login',
 	'about.html' => 'site/about',
 	'contact.html' => 'site/contact',
