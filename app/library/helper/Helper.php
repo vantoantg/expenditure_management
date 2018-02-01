@@ -20,14 +20,6 @@ class Helper
 
 	}
 
-    /**
-     * @param $data
-     * @param string $return
-     * @return string
-     */
-	public static function _isset($data, $return = null){
-	    return isset($data) ? $data : $return;
-    }
 	/**
 	 * @param array $data
 	 * @return array
