@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Default controller for the `front` module
  */
-class FrontController extends Controller
+class DefaultController extends FrontController
 {
     /**
      * Renders the index view for the module
