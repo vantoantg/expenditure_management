@@ -2,7 +2,8 @@
 
 namespace app\modules\front\controllers;
 
-use yii\web\Controller;
+use app\library\helper\Helper;
+
 
 /**
  * Default controller for the `front` module

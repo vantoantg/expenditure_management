@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\library\helper\Helper;
 use app\models\Auth;
 use app\models\LoginForm;
 use app\models\Users;

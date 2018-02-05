@@ -3,7 +3,7 @@
 return [
 	/* Url                                                              => Controller/action */
 	'/' => 'front/default/index',
-//	'/' => 'admin/default/index',
+	'/contact.html' => 'site/contact',
 	'login.html' => 'site/login',
 	'about.html' => 'site/about',
 	'contact.html' => 'site/contact',

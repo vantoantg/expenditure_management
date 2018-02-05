@@ -17,7 +17,6 @@ class Helper
 {
 	public function init()
 	{
-
 	}
 
 	/**
@@ -54,4 +53,11 @@ class Helper
 		}
 		return $protocol . $domainName;
 	}
+
+	public static function test(){
+        echo '<pre>';
+        print_r(Yii::$app->controller->getRoute());
+        echo '</pre>';
+        die;
+    }
 }
