@@ -52,6 +52,17 @@ $config = [
             // uncomment if you want to cache RBAC items hierarchy
             // 'cache' => 'cache',
         ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'web/template/jobs/js/vendor/jquery-1.10.2.min.js',
+                    ]
+                ],
+            ],
+        ],
     ],
 	'modules' => require __DIR__ . '/modules.php',
     'params' => require __DIR__ . '/params.php',

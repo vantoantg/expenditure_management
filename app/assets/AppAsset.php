@@ -32,7 +32,6 @@ class AppAsset extends AssetBundle
         'web/template/jobs/',
     ];
     public $js = [
-        'web/template/jobs/js/vendor/jquery-1.10.2.min.js',
         'web/template/jobs/js/vendor/modernizr-2.6.2.min.js',
         'web/template/jobs/js/bootstrap.min.js',
         'web/template/jobs/js/owl.carousel.min.js',
@@ -40,7 +39,7 @@ class AppAsset extends AssetBundle
         'web/template/jobs/js/main.js',
     ];
     public $depends = [
-//        'yii\web\YiiAsset',
-//        'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }
