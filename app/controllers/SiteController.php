@@ -6,7 +6,10 @@ use app\library\helper\Helper;
 use app\models\Auth;
 use app\models\LoginForm;
 use app\models\Users;
+use Codeception\Lib\ParamsLoader;
+use Symfony\Component\Translation\Loader\FileLoader;
 use Yii;
+use yii\di\ServiceLocator;
 use yii\filters\AccessControl;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -118,6 +121,50 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionAboutUs()
+    {
+        return $this->render('about');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionJobSeekers()
+    {
+        return $this->render('job_seekers');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionEmployeers()
+    {
+        return $this->render('employeers');
+    }
+
+    /**
+     * Displays blog page.
+     *
+     * @return string
+     */
+    public function actionBlog()
+    {
+        echo '<pre>';
+        print_r(Helper::getRoutes());
+        echo '</pre>';
+        die;
+        return $this->render('blog');
+    }
+
+    /**
      * Displays contact page.
      *
      * @return Response|string
@@ -133,15 +180,5 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }

@@ -81,10 +81,10 @@ AppAsset::register($this);
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li class="wow fadeInDown" data-wow-delay="0s"><a class="active" href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Job Seekers</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="#">Employeers</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="#">About us</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="#">Blog</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="<?= Yii::$app->homeUrl; ?>job-seekers.html">Job Seekers</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="<?= Yii::$app->homeUrl; ?>employeers.html">Employeers</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="<?= Yii::$app->homeUrl; ?>about-us.html">About us</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="<?= Yii::$app->homeUrl; ?>blog.html">Blog</a></li>
                 <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="<?= Yii::$app->homeUrl; ?>contact.html">Contact</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

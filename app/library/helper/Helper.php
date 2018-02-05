@@ -54,6 +54,15 @@ class Helper
 		return $protocol . $domainName;
 	}
 
+    /**
+     * @return mixed
+     */
+	public static function getRoutes(){
+
+        $routes = include (Yii::$app->basePath .'/config/routes.php');
+        return $routes;
+    }
+
 	public static function test(){
         echo '<pre>';
         print_r(Yii::$app->controller->getRoute());
