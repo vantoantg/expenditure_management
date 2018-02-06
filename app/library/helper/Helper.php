@@ -40,9 +40,10 @@ class Helper
 	    return Yii::$app->getHomeUrl();
     }
 
-	/**
-	 * @return string
-	 */
+    /**
+     * @param bool $domainNameOnly
+     * @return string
+     */
 	public static function siteURL($domainNameOnly = false)
 	{
 		$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
@@ -54,11 +55,46 @@ class Helper
 		return $protocol . $domainName;
 	}
 
+
     /**
+     * @param string $route
+     * @param string $returnClass
+     * @return string
+     */
+    public static function active($route = 'site/index', $returnClass = 'active')
+    {
+        if ($route == Yii::$app->controller->getRoute()) {
+            return $returnClass;
+        }
+
+        return '';
+    }
+
+    /**
+     * @param string $route
+     * @return string
+     */
+    public static function createUrl($route = '/')
+    {
+        if($route == '/'){
+            return self::homeUrl();
+        }
+
+        foreach (self::getRoutes() as $url => $r) {
+            if ($route == $r) {
+                return self::homeUrl() . $url;
+            }
+        }
+
+        return $route;
+    }
+
+
+    /**
+     * Get all route definned
      * @return mixed
      */
 	public static function getRoutes(){
-
         $routes = include (Yii::$app->basePath .'/config/routes.php');
         return $routes;
     }

@@ -157,10 +157,6 @@ class SiteController extends Controller
      */
     public function actionBlog()
     {
-        echo '<pre>';
-        print_r(Helper::getRoutes());
-        echo '</pre>';
-        die;
         return $this->render('blog');
     }
 

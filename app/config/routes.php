@@ -3,11 +3,11 @@
 return [
 	/* Url                                                              => Controller/action */
 	'/' => 'front/default/index',
-	'/job-seekers.html' => 'site/job-seekers',
-	'/employeers.html' => 'site/employeers',
-	'/about-us.html' => 'site/about-us',
-	'/blog.html' => 'site/blog',
-	'/contact.html' => 'site/contact',
+	'job-seekers.html' => 'site/job-seekers',
+	'employeers.html' => 'site/employeers',
+	'about-us.html' => 'site/about-us',
+	'blog.html' => 'site/blog',
+	'contact.html' => 'site/contact',
 
 
 

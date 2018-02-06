@@ -80,12 +80,13 @@ AppAsset::register($this);
                 <button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s">Sign up</button>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
-                <li class="wow fadeInDown" data-wow-delay="0s"><a class="active" href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="<?= Yii::$app->homeUrl; ?>job-seekers.html">Job Seekers</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.2s"><a href="<?= Yii::$app->homeUrl; ?>employeers.html">Employeers</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="<?= Yii::$app->homeUrl; ?>about-us.html">About us</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="<?= Yii::$app->homeUrl; ?>blog.html">Blog</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="<?= Yii::$app->homeUrl; ?>contact.html">Contact</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0s"><a class="<?= Helper::active('front/default/index') ?>" href="<?= Helper::createUrl() ?>">Home</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="<?= Helper::active('site/job-seekers') ?>" href="<?= Helper::createUrl('site/job-seekers') ?>">Job Seekers</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="<?= Helper::active('site/employeers') ?>" href="<?= Helper::createUrl('site/employeers') ?>">Employeers</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="<?= Helper::active('site/about-us') ?>" href="<?= Helper::createUrl('site/about-us') ?>">About us</a></li>
+                <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="<?= Helper::active('site/blog') ?>" href="<?= Helper::createUrl('site/blog') ?>">Blog</a></li>
+
+                <li class="wow fadeInDown" data-wow-delay="0.5s"><a class="<?= Helper::active('site/contact') ?>" href="<?= Helper::createUrl('site/contact') ?>">Contact</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
