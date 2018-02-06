@@ -77,7 +77,7 @@ AppAsset::register($this);
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="button navbar-right">
                 <button class="navbar-btn nav-button wow bounceInRight login" data-toggle="modal" data-target="#login-modal" data-wow-delay="0.8s">Login</button>
-                <button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s">Sign up</button>
+                <button class="navbar-btn nav-button wow fadeInRight" data-toggle="modal" data-target="#register-modal" data-wow-delay="0.6s">Sign up</button>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li class="wow fadeInDown" data-wow-delay="0s"><a class="<?= Helper::active('front/default/index') ?>" href="<?= Helper::createUrl() ?>">Home</a></li>
@@ -91,7 +91,7 @@ AppAsset::register($this);
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
+<?= \app\components\UserWidget::register() ?>
 <?= $content ?>
 
 
@@ -118,6 +118,28 @@ AppAsset::register($this);
     </div>
 </div>
 
+<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Login</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+
+            <div class="login-help">
+                <a href="#">Register</a> - <a href="#">Forgot Password</a>
+            </div>
+            <div class="text-center socials">
+                <h2>or</h2><br>
+                <?= yii\authclient\widgets\AuthChoice::widget([
+                    'baseAuthUrl' => ['/site/auth']
+                ]) ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="footer-area">
     <div class="container">
