@@ -76,7 +76,7 @@ AppAsset::register($this);
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="button navbar-right">
-                <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.8s">Login</button>
+                <button class="navbar-btn nav-button wow bounceInRight login" data-toggle="modal" data-target="#login-modal" data-wow-delay="0.8s">Login</button>
                 <button class="navbar-btn nav-button wow fadeInRight" data-wow-delay="0.6s">Sign up</button>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
@@ -93,6 +93,31 @@ AppAsset::register($this);
 </nav>
 
 <?= $content ?>
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Login</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+
+            <div class="login-help">
+                <a href="#">Register</a> - <a href="#">Forgot Password</a>
+            </div>
+            <div class="text-center socials">
+                <h2>or</h2><br>
+                <?= yii\authclient\widgets\AuthChoice::widget([
+                    'baseAuthUrl' => ['/site/auth']
+                ]) ?>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="footer-area">
     <div class="container">

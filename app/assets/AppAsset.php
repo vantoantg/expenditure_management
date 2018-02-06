@@ -28,8 +28,7 @@ class AppAsset extends AssetBundle
         'web/template/jobs/css/owl.transitions.css',
         'web/template/jobs/style.css',
         'web/template/jobs/responsive.css',
-        'web/template/jobs/',
-        'web/template/jobs/',
+        'web/template/jobs/my-site.css',
     ];
     public $js = [
         'web/template/jobs/js/vendor/modernizr-2.6.2.min.js',
