@@ -91,32 +91,8 @@ AppAsset::register($this);
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<?= \app\components\UserWidget::register() ?>
 <?= $content ?>
-
-
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="loginmodal-container">
-            <h1>Login</h1><br>
-            <form>
-                <input type="text" name="user" placeholder="Username">
-                <input type="password" name="pass" placeholder="Password">
-                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
-            </form>
-
-            <div class="login-help">
-                <a href="#">Register</a> - <a href="#">Forgot Password</a>
-            </div>
-            <div class="text-center socials">
-                <h2>or</h2><br>
-                <?= yii\authclient\widgets\AuthChoice::widget([
-                    'baseAuthUrl' => ['/site/auth']
-                ]) ?>
-            </div>
-        </div>
-    </div>
-</div>
+<?= (new \app\components\UserWidget())->login() ?>
 
 <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">

@@ -7,6 +7,7 @@
  */
 namespace app\components;
 
+use app\forms\LoginForm;
 use yii\base\Widget;
 use yii\helpers\Html;
 
@@ -25,6 +26,12 @@ class UserWidget extends Widget
     }
 
 
+    public function login(){
+        $form = new LoginForm();
+        return $this->render('user/login', [
+            'model' => $form
+        ]);
+    }
     public static function register(){
         // Todo: form register user
     }

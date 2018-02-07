@@ -1,5 +1,7 @@
 <?php
 use app\library\helper\Helper;
+
+$this->title = 'Home';
 ?>
 <div class="slider-area">
     <div class="slider">
@@ -22,7 +24,7 @@ use app\library\helper\Helper;
                             <input type="text" class="form-control" placeholder="Job Key Word">
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="city" class="form-control">
                                 <option>Select Your City</option>
                                 <option selected>New york, CA</option>
                                 <option>New york, CA</option>
@@ -31,7 +33,7 @@ use app\library\helper\Helper;
                             </select>
                         </div>
                         <div class="form-group">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="cat" class="form-control">
                                 <option>Select Your Category</option>
                                 <option selected>Graphic Design</option>
                                 <option>Web Design</option>

@@ -9,6 +9,11 @@ use yii\web\Controller;
  */
 class FrontController extends Controller
 {
+    public function init()
+    {
+        parent::init();
+    }
+
     /**
      * Renders the index view for the module
      * @return string

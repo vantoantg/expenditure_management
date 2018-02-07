@@ -9,6 +9,8 @@ return [
 	'blog.html' => 'site/blog',
 	'contact.html' => 'site/contact',
 
+	'user/login.html' => 'front/user/login',
+
 
 
 	/* Admin module
