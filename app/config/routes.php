@@ -9,6 +9,7 @@ return [
 	'blog.html' => 'site/blog',
 	'contact.html' => 'site/contact',
 
+	'user/logout.html' => 'front/user/logout',
 	'user/login.html' => 'front/user/login',
 
 

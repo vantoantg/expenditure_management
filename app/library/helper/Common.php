@@ -9,6 +9,17 @@ class Common
     }
 
     /**
+     * @return bool
+     */
+    public static function isLoginned()
+    {
+        if (Yii::$app->user->identity) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * @param string $key
      * @return string
      */

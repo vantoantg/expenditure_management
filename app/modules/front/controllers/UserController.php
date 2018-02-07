@@ -34,4 +34,13 @@ class UserController extends FrontController
             }
         }
     }
+
+    /**
+     * @return array|\yii\web\Response
+     */
+    public function actionLogout()
+    {
+        \Yii::$app->user->logout();
+        return $this->goHome();
+    }
 }

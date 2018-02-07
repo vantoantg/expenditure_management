@@ -76,8 +76,17 @@ AppAsset::register($this);
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="button navbar-right">
-                <button class="navbar-btn nav-button wow bounceInRight login" data-toggle="modal" data-target="#login-modal" data-wow-delay="0.8s">Login</button>
-                <button class="navbar-btn nav-button wow fadeInRight" data-toggle="modal" data-target="#register-modal" data-wow-delay="0.6s">Sign up</button>
+                <?php
+                if(\app\library\helper\Common::isLoginned()){
+                ?>
+                    <a href="<?= Helper::createUrl('front/user/logout') ?>">
+                    <button class="navbar-btn nav-button wow bounceInRight login"
+                            data-wow-delay="0.8s">Logout</button>
+                    </a>
+                <?php }else{ ?>
+                    <button class="navbar-btn nav-button wow fadeInRight" data-toggle="modal" data-target="#register-modal" data-wow-delay="0.6s">Sign up</button>
+                    <button class="navbar-btn nav-button wow bounceInRight login" data-toggle="modal" data-target="#login-modal" data-wow-delay="0.8s">Login</button>
+                <?php } ?>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li class="wow fadeInDown" data-wow-delay="0s"><a class="<?= Helper::active('front/default/index') ?>" href="<?= Helper::createUrl() ?>">Home</a></li>

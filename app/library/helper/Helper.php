@@ -15,6 +15,7 @@ use \yii\web\Response;
  */
 class Helper
 {
+
 	public function init()
 	{
 	}

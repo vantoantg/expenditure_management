@@ -1,7 +1,7 @@
 var Common = {
 	clickGoToUrl: function(){
-		$('[data-go-to="href"]').on("click", function() {
-			document.location = $(this).data('href');
+		$('[data-to="href"]').on("click", function() {
+			document.location = $(this).attr('data-href');
             return false;
 		});
 	},
@@ -124,3 +124,5 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+
+Common.clickGoToUrl();
