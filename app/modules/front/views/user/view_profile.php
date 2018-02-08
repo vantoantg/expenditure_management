@@ -12,88 +12,62 @@ use \app\library\helper\Common;
 $this->title = Common::currentUser('name');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
 <div class="container">
-    <div class="row">
-        <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-            <A href="edit.html" >Edit Profile</A>
-
-            <A href="<?= \app\library\helper\Helper::createUrl('front/user/logout') ?>" >Logout</A>
-            <br>
-            <p class=" text-info">May 05,2014,03:00 pm </p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title"><?= Common::currentUser('name')?></h3>
+    <div class="row profile">
+        <div class="col-md-3">
+            <div class="profile-sidebar">
+                <!-- SIDEBAR USERPIC -->
+                <div class="profile-userpic">
+                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
                 </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="/demo/app/web/template/jobs/img/team-small-1.jpg" class="img-circle img-responsive"> </div>
-
-                        <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
-                          <dl>
-                            <dt>DEPARTMENT:</dt>
-                            <dd>Administrator</dd>
-                            <dt>HIRE DATE</dt>
-                            <dd>11/12/2013</dd>
-                            <dt>DATE OF BIRTH</dt>
-                               <dd>11/12/2013</dd>
-                            <dt>GENDER</dt>
-                            <dd>Male</dd>
-                          </dl>
-                        </div>-->
-                        <div class=" col-md-9 col-lg-9 ">
-                            <table class="table table-user-information">
-                                <tbody>
-                                <tr>
-                                    <td>Department:</td>
-                                    <td>Programming</td>
-                                </tr>
-                                <tr>
-                                    <td>Hire date:</td>
-                                    <td>06/23/2013</td>
-                                </tr>
-                                <tr>
-                                    <td>Date of Birth</td>
-                                    <td>01/24/1988</td>
-                                </tr>
-
-                                <tr>
-                                <tr>
-                                    <td>Gender</td>
-                                    <td>Female</td>
-                                </tr>
-                                <tr>
-                                    <td>Home Address</td>
-                                    <td>Kathmandu,Nepal</td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td><a href="mailto:info@support.com">info@support.com</a></td>
-                                </tr>
-                                <td>Phone Number</td>
-                                <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
-                                </td>
-
-                                </tr>
-
-                                </tbody>
-                            </table>
-
-                            <a href="#" class="btn btn-primary">My Sales Performance</a>
-                            <a href="#" class="btn btn-primary">Team Sales Performance</a>
-                        </div>
+                <!-- END SIDEBAR USERPIC -->
+                <!-- SIDEBAR USER TITLE -->
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        Marcus Doe
+                    </div>
+                    <div class="profile-usertitle-job">
+                        Developer
                     </div>
                 </div>
-                <div class="panel-footer">
-                    <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
-                    <span class="pull-right">
-                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                        </span>
+                <!-- END SIDEBAR USER TITLE -->
+                <!-- SIDEBAR BUTTONS -->
+                <div class="profile-userbuttons">
+                    <button type="button" class="btn btn-success btn-sm">Follow</button>
+                    <button type="button" class="btn btn-danger btn-sm">Message</button>
                 </div>
-
+                <!-- END SIDEBAR BUTTONS -->
+                <!-- SIDEBAR MENU -->
+                <div class="profile-usermenu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                Overview </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-user"></i>
+                                Account Settings </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="glyphicon glyphicon-ok"></i>
+                                Tasks </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-flag"></i>
+                                Help </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END MENU -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="profile-content">
+                Some user related content goes here...
             </div>
         </div>
     </div>
