@@ -31,10 +31,6 @@ class UserController extends FrontController
 
     public function actionViewProfile($id)
     {
-        echo '<pre>';
-        print_r($id);
-        echo '</pre>';
-        die;
         return $this->render('view_profile');
     }
 
