@@ -79,12 +79,14 @@ AppAsset::register($this);
                 <?php
                 if(\app\library\helper\Common::isLoginned()){
                 ?>
-                    <a href="<?= Helper::createUrl('front/user/logout') ?>">
+                    <a href="<?= Helper::createUrl('front/user/profile') ?>">
                     <button class="navbar-btn nav-button wow bounceInRight login"
-                            data-wow-delay="0.8s">Logout</button>
+                            data-wow-delay="0.8s">My page</button>
                     </a>
                 <?php }else{ ?>
+                <a href="<?= Helper::createUrl('front/user/register') ?>">
                     <button class="navbar-btn nav-button wow fadeInRight" data-toggle="modal" data-target="#register-modal" data-wow-delay="0.6s">Sign up</button>
+                </a>
                     <button class="navbar-btn nav-button wow bounceInRight login" data-toggle="modal" data-target="#login-modal" data-wow-delay="0.8s">Login</button>
                 <?php } ?>
             </div>

@@ -75,8 +75,11 @@ class Helper
      * @param string $route
      * @return string
      */
-    public static function createUrl($route = '/')
+    public static function createUrl($route = '/', $params = [])
     {
+        if($params){
+            // Todo
+        }
         if($route == '/'){
             return self::homeUrl();
         }

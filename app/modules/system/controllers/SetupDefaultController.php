@@ -2,6 +2,7 @@
 
 namespace app\modules\system\controllers;
 
+use yii\base\Exception;
 use yii\web\Controller;
 
 /**
@@ -16,18 +17,19 @@ class SetupDefaultController extends Controller
     }
 
     /**
-     * Renders the index view for the module
-     * @return string
+     * @throws \Exception
      */
     public function actionIndex()
     {
         $pathRoot = \Yii::$app->getBasePath();
         $pathAssets = $pathRoot . '/assets';
-        if (chmod($pathAssets, 0777)) {
+        try{
+            chmod($pathAssets, 0777);
             echo "Changed $pathAssets to CHMOD 0777";
-        } else {
-            echo "Couldn't do it.";
+        }catch (Exception $exception){
+            throw new \Exception($exception->getMessage() . ' Couldn\'t set permission.');
         }
+
 //        return $this->goHome();
     }
 }

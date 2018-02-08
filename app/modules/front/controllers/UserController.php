@@ -4,6 +4,7 @@ namespace app\modules\front\controllers;
 
 use app\forms\LoginForm;
 use app\library\helper\Helper;
+use app\models\Users;
 
 
 /**
@@ -18,6 +19,28 @@ class UserController extends FrontController
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionRegister()
+    {
+        $model = new Users();
+        return $this->render('register', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionViewProfile($id)
+    {
+        echo '<pre>';
+        print_r($id);
+        echo '</pre>';
+        die;
+        return $this->render('view_profile');
+    }
+
+    public function actionProfile()
+    {
+        return $this->render('profile');
     }
 
     /**

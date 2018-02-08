@@ -63,7 +63,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
+            'username' => 'Email',
             'email' => 'Email',
             'password' => 'Password',
             'auth_key' => 'Auth Key',
